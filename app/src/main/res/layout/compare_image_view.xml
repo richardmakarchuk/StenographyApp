@@ -36,6 +36,7 @@
         android:id="@+id/decode_message_button"
         android:layout_gravity="center"
         android:text="@string/decode_message"
-        android:layout_weight=".1"/>
+        android:layout_weight=".1"
+        android:visibility="gone"/>
 
 </LinearLayout>

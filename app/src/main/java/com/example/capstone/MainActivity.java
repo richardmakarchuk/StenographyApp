@@ -78,8 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             final Uri imageUri = data.getData();
                             final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                            Bitmap selectedImage = BitmapFactory.decodeStream(imageStream);
-                            image = selectedImage.copy(Bitmap.Config.ARGB_8888,true);
+                            image = BitmapFactory.decodeStream(imageStream);
                             Intent intent = new Intent(IMAGE_RECEIVED);
                             sendBroadcast(intent);
 

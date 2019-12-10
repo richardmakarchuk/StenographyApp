@@ -33,8 +33,8 @@ public class ImageViewer {
 
     public ImageViewer(final Bitmap bitmap,final Context context){
         this.context = context;
-        this.originalBitmap = bitmap;
-        this.editedBitmap = bitmap;
+        this.originalBitmap = bitmap.copy(Bitmap.Config.ARGB_8888,false);
+        this.editedBitmap = bitmap.copy(Bitmap.Config.ARGB_8888,true);
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.image_view,null);
         submitButton = view.findViewById(R.id.submit_button);
@@ -207,10 +207,12 @@ public class ImageViewer {
                 if(position==0){
                     position = 1;
                     imageTitle.setText(R.string.edited_image);
+                    nextButton.setText(R.string.see_original_image);
                 }
                 else{
                     position = 0;
                     imageTitle.setText(R.string.original_image);
+                    nextButton.setText(R.string.see_edited_image);
                 }
             }
         });
