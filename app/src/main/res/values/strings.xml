@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Capstone</string>
+    <string name="action_settings">Settings</string>
+    <string name="select_image">Select Image</string>
+    <string name="enter_message">Enter Message</string>
+    <string name="submit">Submit</string>
+    <string name="original_image">Original Image</string>
+    <string name="edited_image">Edited Image</string>
+    <string name="see_edited_image">See Edited Image</string>
+    <string name="see_original_image">See Original Image</string>
+    <string name="decoded_message">Decoded Message</string>
+    <string name="put_decoded_message">placeholder message</string>
+    <string name="decode_message">decode message</string>
+</resources>
